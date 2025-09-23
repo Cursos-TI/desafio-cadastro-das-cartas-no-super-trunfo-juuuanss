@@ -79,7 +79,7 @@ scanf("%d", &Pontos1);
 
 printf("\n");
 
-// Operadores matematicos
+// Operadores matematicos//
 
 
 Densidade_populacional1 = (float) Populacao1 / Area1;
@@ -121,7 +121,7 @@ scanf("%d", &Pontos2);
 
 
 
-// Operadores matematicos
+// Operadores matematicos//
 
 
 Densidade_populacional2 = (float) Populacao2 / Area2;
@@ -139,7 +139,7 @@ printf("\n");
 printf("CARTA 01 \n");
 printf("Estado: %s \n", Estado1);
 printf("Código: %s \n", Codigo1);
-printf("Nome da cidade: %s\n", Cidade1);
+printf("Nome da cidade: %s \n", Cidade1);
 printf("População: %d \n",Populacao1);
 printf("Área ( Em Km²): %f \n", Area1);
 printf("PIB: %f \n", Pib1);
