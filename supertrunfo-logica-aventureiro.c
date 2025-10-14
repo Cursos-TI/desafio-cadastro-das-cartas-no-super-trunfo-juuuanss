@@ -182,78 +182,203 @@ printf("Pib per Capita: %.3f Reais\n" ,Pib_per_capita2);
 printf("Superpoder: %.3f \n",superpoder2);
 
 
-//////////////#################################/////////////////
+//////////////#############        ATRIBUTOS DE COMPARAÇÃO       ####################/////////////////
+int comparacao1, comparacao2;
+int resultado1, resultado2;
 
-printf("COMPARAÇÃO DAS CARTAS \n");
+printf("MENU DE COMPARAÇÃO DAS CARTAS \n");
+printf("1. População.\n");
+printf("2. Área.\n");
+printf("3. Pib.\n");
+printf("4. N°. Pontos turisticos \n");
+printf("5. Densidade populacional.\n");
+printf("6. Pib per capita.\n");
+printf("7. Superpoder.\n");
+//############################################//
 
-printf("População 1 > população 2 ?: %d \n", Populacao1 > Populacao2);    
-printf("população 1 < população 2 ?: %d \n", Populacao1 < Populacao2);
+printf("\n");
 
-printf("Área 1 > Área 2 ?: %d \n", Area1 > Area2);    
-printf("Área 1 < Área 2 ?: %d \n", Area1 < Area2);
-
-printf("PIB 1 > PIB 2 ?: %d \n", Pib1 > Pib2);    
-printf("PIB 1 < PIB 2 ?: %d \n", Pib1 < Pib2);
-
-printf("Pontos Turisticos 1 > Pontos Turisticos 2 ?: %d \n", Pontos1 > Pontos2);    
-printf("Pontos Turisticos 1 < Pontos Turisticos 2 ?: %d \n", Pontos1 < Pontos2);
-
-printf("Densidade populacional 1 > Densidade populacional 2 ?: %d \n", Densidade_populacional1 > Densidade_populacional2);
-printf("Densidade populacional 1 < Densidade populacional 2 ?: %d \n", Densidade_populacional1 < Densidade_populacional2);
-
-printf("Pib per Capita 1 > Pib per Capita 2 ?: %d \n", Pib_per_capita1 > Pib_per_capita2);
-printf("Pib per Capita 1 < Pib per Capita 2 ?: %    d \n", Pib_per_capita1 < Pib_per_capita2);
+printf(" Escolha o primeiro atributo para comparação.\n");
+scanf("%d", &comparacao1);
 
 
-printf("Comparação da cartas\n");
+switch (comparacao1)
+{
+case 1: 
+printf("População 1 %d\n",&Populacao1);
+printf("População 2 %d\n",&Populacao2);
 
-printf("Qual carta possui a maior população?\n");
+resultado1 = Populacao1  > Populacao2 ? 1: ((Populacao2 > Populacao1)? 2: 0);
 
-if (Populacao1>Populacao2){
-    printf("População da carta 1 -%d - População da carta 2 -%d\n", Populacao1, Populacao2);
-    printf("Carta 1 venceu!\n");
+    break;
+
+
+case 2: 
+printf("Área 1 %f\n",&Area1);
+printf("Área 2 %f\n",&Area2);
+
+resultado1 = Area1  > Area2 ? 1: ((Area2 > Area1)? 2: 0);
+
+    break;
+
+
+case 3: 
+printf("Pib 1 %f\n",&Pib1);
+printf("Pib 2 %f\n",&Pib2);
+
+resultado1 = Pib1  > Pib2 ? 1: ((Pib2 > Pib1)? 2: 0);
+
+    break;
+
+
+case 4: 
+printf("Pontos turisticos 1 %d\n",&Pontos1);
+printf("Pontos turisticos 2 %d\n",&Pontos2);
+
+resultado1 = Pontos1  > Pontos2 ? 1: ((Pontos2 > Pontos1)? 2: 0);
+
+    break;
+
+case 5: 
+printf("Densidade populacional 1 %f\n",&Densidade_populacional1);
+printf("Densidade populacional 2 %f\n",&Densidade_populacional2);
+
+resultado1 = Densidade_populacional1  < Densidade_populacional2 ? 1: ((Densidade_populacional2 < Densidade_populacional1)? 2: 0);
+
+
+    break;
+
+case 6: 
+printf("Pib per capita 1 %f\n",&Pib_per_capita1);
+printf("Pib per capita 2 %f\n",&Pib_per_capita2);
+
+resultado1 = Pib_per_capita1  > Pib_per_capita2 ? 1: ((Pib_per_capita2 > Pib_per_capita1)? 2: 0);
+
+    break;
+
+case 7: 
+printf("Superpoder 1 %f\n",&superpoder1);
+printf("Superpoder 2 %f\n",&superpoder2);
+
+resultado1 = superpoder1  > superpoder2 ? 1: ((superpoder2 > superpoder1)? 2: 0);
+
+    break;
+
+
+default:
+    printf("Opção invalida!\n");
+
+    break;
 }
-else{
-    printf("População da carta 1 -%d - População da carta 2 -%d\n", Populacao1, Populacao2);
-    printf("Carta 2  venceu!\n");
+// SEGUNDA COMPARAÇÃO
+printf("MENU DE COMPARAÇÃO DAS CARTAS \n");
+printf("1. População.\n");
+printf("2. Área.\n");
+printf("3. Pib.\n");
+printf("4. N°. Pontos turisticos \n");
+printf("5. Densidade populacional.\n");
+printf("6. Pib per capita.\n");
+printf("7. Superpoder.\n");
+
+printf("\n");
+
+printf(" Escolha o segundo atributo para comparação.\n");
+printf("\n");
+
+printf("ATENÇÃO: ESCOLHA UM ATRIBUTO DIFERENTE DI PRIMEIRO.\n");
+printf("\n");
+
+scanf("%d", &comparacao2);
+
+
+switch (comparacao2)
+{
+case 1: 
+printf("População 1 %d\n",&Populacao1);
+printf("População 2 %d\n",&Populacao2);
+
+resultado2 = Populacao1  > Populacao2 ? 1: ((Populacao2 > Populacao1)? 2: 0);
+
+    break;
+
+
+case 2: 
+printf("Área 1 %f\n",&Area1);
+printf("Área 2 %f\n",&Area2);
+
+resultado2 = Area1  > Area2 ? 1: ((Area2 > Area1)? 2: 0);
+
+    break;
+
+
+case 3: 
+printf("Pib 1 %f\n",&Pib1);
+printf("Pib 2 %f\n",&Pib2);
+
+resultado2 = Pib1  > Pib2 ? 1: ((Pib2 > Pib1)? 2: 0);
+
+    break;
+
+
+case 4: 
+printf("Pontos turisticos 1 %d\n",&Pontos1);
+printf("Pontos turisticos 2 %d\n",&Pontos2);
+
+resultado2 = Pontos1  > Pontos2 ? 1: ((Pontos2 > Pontos1)? 2: 0);
+
+    break;
+
+case 5: 
+printf("Densidade populacional 1 %f\n",&Densidade_populacional1);
+printf("Densidade populacional 2 %f\n",&Densidade_populacional2);
+
+resultado2 = Densidade_populacional1  < Densidade_populacional2 ? 1: ((Densidade_populacional2 < Densidade_populacional1)? 2: 0);
+
+
+    break;
+
+case 6: 
+printf("Pib per capita 1 %f\n",&Pib_per_capita1);
+printf("Pib per capita 2 %f\n",&Pib_per_capita2);
+
+resultado2 = Pib_per_capita1  > Pib_per_capita2 ? 1: ((Pib_per_capita2 > Pib_per_capita1)? 2: 0);
+
+    break;
+
+case 7: 
+printf("Superpoder 1 %f\n",&superpoder1);
+printf("Superpoder 2 %f\n",&superpoder2);
+
+resultado2 = superpoder1  > superpoder2 ? 1: ((superpoder2 > superpoder1)? 2: 0);
+
+    break;
+
+
+default:
+    printf("Opção invalida!\n");
+
+    break;
 }
 
-//////////////#################################/////////////////
+//###################################################################//
+printf("### RESULTADO DA PRIMEIRA COMPARAÇÃO.\n");
 
-printf("Qual carta possui a maior Área?\n");
-if (Area1>Area2){
-    printf("Area da carta 1 -%f - Área da carta 2 -%f\n ", Area1, Area2);
-    printf("Carta 1 venceu!\n");
-}
-else{
-      printf("Area da carta 1 -%f - Área da carta 2 -%f \n", Area1, Area2);
-    printf("Carta 2 Venceu!\n");
-}
-//////////////#################################/////////////////
+printf("Cidade 1 %s\n", Cidade1);
+printf("Cidade 2 %s\n", Cidade2);
 
-
-printf("Qual carta possui o maior PIB?\n");
-if (Pib1>Pib2){
-    printf("Pib da  carta 1 - %f - Pib da carta 2 -%f\n", Pib1, Pib2);
-printf("Carta 1 venceu!\n");
-}
-else{
-    printf("Pib da  carta 1 - %f - Pib da carta 2 -%f\n", Pib1, Pib2);
-    printf("Carta 2 venceu!\n");
-}
-//////////////#################################/////////////////
-
-printf("Qual carta possui a maior quantidade de pontos turisticos?\n");
-if (Pontos1>Pontos2){
-    printf("Pontos  turisticos da carta 1 -%d - Pontos turisticos da carta 2- %d\n ", Pontos1, Pontos2);
-    printf("Carta 1 venceu!\n");
-}
-else{
-    printf("Pontos  turisticos da carta 1 -%d - Pontos turisticos da carta 2- %d\n ", Pontos1, Pontos2);
-    printf("Carta 2 vencei!\n");
+if (resultado1 == 1 && resultado2 ==1)
+{
+   printf("A CARTA 1 VENCEU.ZN");
+}else if (resultado1 == 2 && resultado2 == 2)
+{printf("A CARTA 2 VENCEU!!");
+}else{
+    printf("O JOGO TERMINOU EMPATE!!");
 }
 
-    case 2:
+
+break;
+
+case 2:
 printf("Regras do Jogo.\n");
 break;
 
@@ -265,17 +390,6 @@ default:
     printf("Opção invalida.\n");
     break;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
